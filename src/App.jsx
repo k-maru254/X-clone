@@ -1,7 +1,6 @@
-import { Button, Container, Row, Col } from "react-bootstrap";
-import "./App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
+import "./App.css";
 
 function App() {
   return (

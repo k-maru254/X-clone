@@ -6,7 +6,7 @@ import Sidebar from './Sidebar';
 function Main() {
     return (
     
-        <main className="text-bg-dark d-flex flex-shrink-1 flex-grow-1">
+        <main className="bg-black text-white d-flex justify-content-evenly flex-shrink-1 flex-grow-1 overflow-auto">
             {/* Page Routes */ }
             <PageRouter/>
 

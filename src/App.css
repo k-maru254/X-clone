@@ -1,0 +1,15 @@
+*{
+    box-sizing:border-box;
+}
+.nav-button > div{
+    transition: background 150ms ease;
+}
+.active-user, .logo-link{
+    transition: background 250ms ease;
+}
+.nav-button:hover > div, .active-user:hover, .logo-link:hover{
+    background: rgba(225, 224, 224, 0.182);
+}
+.search:focus{
+    outline: none;
+}

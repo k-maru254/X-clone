@@ -11,7 +11,7 @@ import Notifications from "../pages/Notifications"
 
 function PageRouter() {
   return (
-    <div className="h-100 border-start border-end border-secondary" style={ { width: "600px" } }>
+    <div className="h-100" style={ { width: "600px" } }>
       <Routes>
         <Route path="home" element={ <Home /> } />
         <Route path="explore" element={ <Explore /> } />

@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Row } from "react-bootstrap";
 
-function Timeline() {
+function Timeline({data}) {
   return (
-    <div className="h-100 border-start border-end border-secondary" style={{width:"600px"}}>
-      This is the timeline section
-    </div>
-  )
+    <Row className="border-bottom border-secondary border-1">
+      {data}
+    </Row>
+  );
 }
 
-export default Timeline
+export default Timeline;
