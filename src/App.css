@@ -1,7 +1,7 @@
 *{
     box-sizing:border-box;
 }
-.nav-button > div{
+.nav-button>div {
     transition: background 150ms ease;
 }
 .active-user, .logo-link{
@@ -12,4 +12,20 @@
 }
 .search:focus{
     outline: none;
+}
+#user-post-input{
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color:white;
+}
+#user-post-input::placeholder{
+    color: rgba(211, 211, 211, 0.427);
+}
+.post-input-icon {
+    transition: background 150ms ease;
+}
+
+.post-input-icon:hover, #who-can-reply-text:hover{
+    background: rgba(85, 188, 248, 0.182);
 }

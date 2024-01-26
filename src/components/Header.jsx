@@ -61,9 +61,9 @@ function Header() {
             <Navbar className="flex-column ms-3 p-2 align-items-start flex-shrink-1" style={ { flexBasis: "300px", minWidth: "100px" } }>
                 {/* Create the twitter logo */ }
                 <Link to="/home" className="ms-2 logo-link rounded-circle d-flex align-items-center justify-content-center" style={{width:"60px", height:"60px"}}>
-                    <logo className="p-2 rounded-circle d-flex justify-content-center align-items-center" style={ { width: "56px", height: "56px" } }>
+                    <div className="p-2 rounded-circle d-flex justify-content-center align-items-center" style={ { width: "56px", height: "56px" } }>
                         <BsTwitterX size={ 28 } color="white" />
-                    </logo>
+                    </div>
                 </Link>
                 
                 {/* Create a vertical navigation */ }

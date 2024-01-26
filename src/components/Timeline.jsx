@@ -1,11 +1,19 @@
 import React from 'react';
 import { Row } from "react-bootstrap";
+import Posts from './Posts';
 
 function Timeline({data}) {
   return (
-    <Row className="border-bottom border-secondary border-1">
-      {data}
-    </Row>
+    <>
+      <Posts/>
+      <Posts/>
+      <Posts/>
+      <Posts/>
+      <Posts/>
+      <Posts/>
+      <Posts/>
+      <Posts/>
+    </>
   );
 }
 
