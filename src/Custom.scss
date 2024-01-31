@@ -1,0 +1,23 @@
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$my-colors:(    
+    "twitter-blue":#1DA1F2,
+    "twitter-blue-light": #152b3a,
+    "twitter-gray": #16181c,
+    "twitter-green-light": #071a14,
+    "twitter-red-light": #210a14
+);
+
+$my-font-sizes:(
+    12: 12px,
+    14: 14px,
+    16: 16px,
+    18:18px
+);
+
+$font-sizes: map-merge(font-sizes, my-font-sizes);
+$theme-colors: map-merge($theme-colors, $my-colors);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

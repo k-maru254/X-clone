@@ -1,31 +1,77 @@
+:root{
+    --bs-secondary: #6c757d;
+}
+
 *{
     box-sizing:border-box;
 }
+
 .nav-button>div {
     transition: background 150ms ease;
 }
-.active-user, .logo-link{
+
+.active-user, .logo-link, .more-about-post{
     transition: background 250ms ease;
 }
+
 .nav-button:hover > div, .active-user:hover, .logo-link:hover{
     background: rgba(225, 224, 224, 0.182);
 }
+
 .search:focus{
     outline: none;
 }
+
 #user-post-input{
     border: none !important;
     outline: none !important;
     box-shadow: none !important;
     color:white;
 }
+
 #user-post-input::placeholder{
     color: rgba(211, 211, 211, 0.427);
 }
-.post-input-icon {
-    transition: background 150ms ease;
+
+#search{    
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-.post-input-icon:hover, #who-can-reply-text:hover{
-    background: rgba(85, 188, 248, 0.182);
+#search::placeholder{
+    color: var(--bs-secondary);
+}
+
+.post-input-icon {
+    transition: all 150ms ease;
+}
+
+.post-input-icon:hover, #who-can-reply-text:hover, .more-about-post:hover{
+    background: rgba(85, 188, 248, 0.182) !important;
+    color: #55bcf82e !important;
+}
+
+.my-fs-14{
+    font-size: 14px;
+}
+
+.my-fs-12{
+    font-size: 12px;
+}
+
+.my-fs-10{
+    font-size: 10px;
+}
+
+.icon-budge {
+    transition: all 250ms ease;
+}
+
+.itemContainer__item{
+    cursor: pointer;
+    transition: all 250ms ease;
+}
+.itemContainer__item:hover{
+    background-color: #6c757d39;
 }

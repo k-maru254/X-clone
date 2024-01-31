@@ -9,7 +9,7 @@ function Home() {
     
     return (<Container className="border-start border-end border-secondary">
         <Tab.Container id="home-tabs" activeKey={ activePane } onSelect={ (value) => setActivePane(value) }>
-            <Row className="border-bottom p-2 position-sticky sticky-top">
+            <Row className="border-bottom p-2 position-sticky sticky-top bg-black opacity-75">
                 <Col>
                     <Nav justify id="timeline-tabs">
                         <Nav.Item>

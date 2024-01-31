@@ -13,6 +13,7 @@ function Timeline({data}) {
       <Posts/>
       <Posts/>
       <Posts/>
+      <Posts/>
     </>
   );
 }

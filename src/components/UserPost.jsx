@@ -8,6 +8,7 @@ import { AiOutlineSchedule } from "react-icons/ai";
 import { IoLocationOutline } from "react-icons/io5";
 import { createElement, useState } from "react";
 import { BiWorld } from "react-icons/bi";
+import Avatar from "./Avatar";
 
 function UserPost() {
   const icons = [CiImageOn, MdOutlineGifBox, MdOutlinePoll, FaRegSmile, AiOutlineSchedule, IoLocationOutline];
@@ -24,8 +25,8 @@ function UserPost() {
       {/* The submit button */ }
       <Row className="">
         <Col xs="1" className="p-1 mt-2">
-          <div className="d-flex justify-content-center align-items-center bg-secondary rounded-circle m-2" style={ { width: "40px", height: "40px" } }>
-            <CiUser size={ 24 } color="white" />
+          <div className=" m-2" style={ { width: "40px", height: "40px" } }>
+            <Avatar size={ 30 } color="white" />
           </div>
         </Col>
         <Col className=" mt-3">
