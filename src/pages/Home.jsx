@@ -5,12 +5,17 @@ import Timeline from "../components/Timeline";
 import UserPost from "../components/UserPost";
 function Home() {
     const [activePane, setActivePane] = useState("forYou");
-    const activePaneStyle = "border-bottom border-5 border-primary "
+    const activePaneStyle = "border-bottom border-5 border-twitter-blue "
     
-    return (<Container className="border-start border-end border-secondary">
-        <Tab.Container id="home-tabs" activeKey={ activePane } onSelect={ (value) => setActivePane(value) }>
+    return (
+        <Container className="border-start border-end border-secondary">
+            {/* Container containing the  timelines and the sidebar*/ }
+            {/* The tab container block containing the For You and the Following timelines */}
+            <Tab.Container id="home-tabs" activeKey={ activePane } onSelect={ (value) => setActivePane(value) }>
+                
             <Row className="border-bottom p-2 position-sticky sticky-top bg-black opacity-75">
-                <Col>
+                    <Col>
+                        {/* The For You and the Following tab navigators */}
                     <Nav justify id="timeline-tabs">
                         <Nav.Item>
                             <Nav.Link eventKey="forYou">
@@ -30,11 +35,11 @@ function Home() {
                     </div>
                 </Col>
             </Row>
-
+            {/* The part where a user can make a post and include an image, video, emoji, location, polls, or schedules*/}
             <Row id="user-post" className="border-bottom border-secondary border-1">
                 <UserPost />
             </Row>
-
+            {/* The tab panes for the attached to the tab navigators  */}
             <Row>
                 <Tab.Content id="timeline-posts">
                     <Tab.Pane eventKey="forYou">
