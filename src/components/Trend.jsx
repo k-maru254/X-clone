@@ -12,7 +12,7 @@ function Trend() {
             <Container fluid className="">
                 <Row className="flex-column">
                     {/* Show where trending. Show where and if promotion, don't show trending*/ }
-                    <Col className="d-flex p-relative justify-content-between align-items-center text-secondary ps-3" style={{fontSize:"14px",height:"16px"}}>
+                    <Col className="d-flex position-relative justify-content-between align-items-center text-secondary ps-3" style={{fontSize:"14px",height:"16px"}}>
                         <span>Trending in Kenya</span>
                         <div className="position-absolute end-0 me-2 mt-3">
                         <MoreIcon icon={BsThreeDots} color={twitterColors.lightGray} size={14} hoverColor={"blue"}  />

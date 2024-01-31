@@ -12,8 +12,6 @@ function Trends() {
                 <Trend />
                 <Trend />
                 <Trend />
-                <Trend />
-                <Trend />
 
             {/* Show more button */ }
             <ShowMore />

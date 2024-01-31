@@ -46,8 +46,8 @@ function Sidebar({ mainScrollAmount }) {
         <SidebarContentContainer title="Live on X">
           <LiveOnX />
         </SidebarContentContainer>
-        {/* Trends for you */ }
         
+        {/* Trends for you */ }        
         <SidebarContentContainer title="Trends for you">
           <Trends />
         </SidebarContentContainer>

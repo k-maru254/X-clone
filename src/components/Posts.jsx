@@ -9,12 +9,13 @@ import { IoStatsChart } from "react-icons/io5";
 import { FaRegBookmark } from "react-icons/fa6";
 import { MdOutlineFileUpload } from "react-icons/md";
 import withBadgeIcon from "./withHoverIcon";
+import CenterItemContainer from "./CenterItemContainer";
 
 function Posts() {
     const BadgedIcon = withBadgeIcon(Avatar)
     return (
         
-        <Row className="border-bottom border-secondary border-1">
+        <CenterItemContainer >
             <Card className="bg-black text-white">
                 {/** Reposts, retweet indicators */ }
                 <Row>
@@ -73,7 +74,7 @@ function Posts() {
                     </Col>
                 </Row>
             </Card>
-        </Row>
+        </CenterItemContainer>
     );
 }
 

@@ -1,57 +1,47 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Nav, Tab } from "react-bootstrap";
-import { CiSettings } from "react-icons/ci";
+import CenterItemContainer from "../components/CenterItemContainer";
+import CenterItemsContainer from "../components/CenterItemsContainer";
 import Timeline from "../components/Timeline";
+import TimelineTabNavs from "../components/TimelineTabNavs";
 import UserPost from "../components/UserPost";
+import Settings from "../components/Settings";
 function Home() {
     const [activePane, setActivePane] = useState("forYou");
     const activePaneStyle = "border-bottom border-5 border-twitter-blue "
     
     return (
-        <Container className="border-start border-end border-secondary">
+        <CenterItemsContainer>
             {/* Container containing the  timelines and the sidebar*/ }
-            {/* The tab container block containing the For You and the Following timelines */}
+            {/* The tab container block containing the For You and the Following timelines */ }
             <Tab.Container id="home-tabs" activeKey={ activePane } onSelect={ (value) => setActivePane(value) }>
                 
-            <Row className="border-bottom p-2 position-sticky sticky-top bg-black opacity-75">
+                <CenterItemContainer header className="opacity-75 p-2">                    
                     <Col>
-                        {/* The For You and the Following tab navigators */}
-                    <Nav justify id="timeline-tabs">
-                        <Nav.Item>
-                            <Nav.Link eventKey="forYou">
-                                <span className={ `text-white ${ activePane === 'forYou' ? activePaneStyle : '' } p-2` } >For you</span>
-                            </Nav.Link>
-                        </Nav.Item>
-                        <Nav.Item>
-                            <Nav.Link eventKey="following" className={ `text-white ${ activePane === 'following' ? 'activePaneStyle' : '' }` }>
-                                <span className={ `text-white ${ activePane === 'following' ? activePaneStyle : '' } p-2` } >Following</span>
-                            </Nav.Link>
-                        </Nav.Item>
-                    </Nav>
-                </Col>
-                <Col xs="1" className="text-center p-0 d-flex justify-content-center">
-                    <div className="bg-secondary rounded-circle d-flex justify-content-center align-items-center m-0" style={ { width: "40px", height: "40px" } }>
-                        <CiSettings size={ 20 } color="white" />
-                    </div>
-                </Col>
-            </Row>
-            {/* The part where a user can make a post and include an image, video, emoji, location, polls, or schedules*/}
-            <Row id="user-post" className="border-bottom border-secondary border-1">
-                <UserPost />
-            </Row>
-            {/* The tab panes for the attached to the tab navigators  */}
-            <Row>
-                <Tab.Content id="timeline-posts">
-                    <Tab.Pane eventKey="forYou">
-                        <Timeline data="For you content" />
-                    </Tab.Pane>
-                    <Tab.Pane eventKey="following">
-                        <Timeline data="Following content" />
-                    </Tab.Pane>
-                </Tab.Content>
-            </Row>
-        </Tab.Container>
-    </Container>
+                        <TimelineTabNavs activePane={ activePane } activePaneStyle={ activePaneStyle } />
+                    </Col>
+                    <Col xs="1" className="text-center p-0 d-flex justify-content-center">
+                        <Settings />
+                    </Col>
+                </CenterItemContainer>
+
+                {/* The part where a user can make a post and include an image, video, emoji, location, polls, or schedules*/ }
+                <CenterItemContainer id="user-post" className="border-bottom border-secondary border-1">
+                    <UserPost />
+                </CenterItemContainer>
+                {/* The tab panes for the attached to the tab navigators  */ }
+                <Row>
+                    <Tab.Content id="timeline-posts">
+                        <Tab.Pane eventKey="forYou">
+                            <Timeline data="For you content" />
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="following">
+                            <Timeline data="Following content" />
+                        </Tab.Pane>
+                    </Tab.Content>
+                </Row>
+            </Tab.Container>
+        </CenterItemsContainer>
     );
 }
 

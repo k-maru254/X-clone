@@ -1,10 +1,10 @@
 import React from 'react';
 import ItemContainer from './ItemContainer';
 
-function ShowMore() {
+function ShowMore({rounded=false}) {
     return (
     
-        <ItemContainer className="rounded-bottom-4 p-3 text-twitter-blue">
+        <ItemContainer className={`rounded-bottom-${rounded?4:0} px-4 py-3 text-twitter-blue`}>
             <span>Show more</span>
         </ItemContainer>
     );

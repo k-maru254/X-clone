@@ -1,18 +1,15 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
 import "./App.css";
-import Container from "react-bootstrap";
 
 function App() {
   return (
-    <Container className="bg-secondary vh-100" >
-      <Row>
-        {/* Header */ }
-        <Header />
-        {/* Main  */ }
-        <Main />
-      </Row>
-    </Container>
+    <div className="bg-secondary d-flex vh-100 vw-100 flex-shrink-1 flex-grow-1 " >
+      {/* Header */ }
+      <Header/>
+      {/* Main  */ }
+      <Main/>
+    </div>
   );
 }
 
