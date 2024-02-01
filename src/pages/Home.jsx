@@ -20,9 +20,6 @@ function Home() {
                     <Col>
                         <TimelineTabNavs activePane={ activePane } activePaneStyle={ activePaneStyle } />
                     </Col>
-                    <Col xs="1" className="text-center p-0 d-flex justify-content-center">
-                        <Settings />
-                    </Col>
                 </CenterItemContainer>
 
                 {/* The part where a user can make a post and include an image, video, emoji, location, polls, or schedules*/ }

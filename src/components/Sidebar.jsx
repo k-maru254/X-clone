@@ -29,7 +29,7 @@ function Sidebar({ mainScrollAmount }) {
   }, [mainScrollAmount]);
 
   return (
-    <div ref={sidebarRef} className={`bg-black text-light flex-shrink-0 pb-3 position-${sidebarPosition}`} style={ { width: "350px", top:`${-extraSidebarHeight - 10}px`} }>
+    <div ref={sidebarRef} className={`bg-black text-light flex-shrink-0 pb-3 position-${sidebarPosition}`} style={ { width: "340px", top:`${-extraSidebarHeight - 10}px`} }>
       
       {/* Search input */ }
       <Container className="my-3">

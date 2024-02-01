@@ -9,12 +9,9 @@ import { Col } from "react-bootstrap";
 function Explore() {
   return (
     <CenterItemsContainer>
-      <CenterItemContainer className="p-2">
+      <CenterItemContainer header className="p-2">
         <Col>
           <Search />
-        </Col>
-        <Col xs="2" className="d-flex justify-content-end align-items-center">
-          <Settings />
         </Col>
       </CenterItemContainer>
       <CenterItemContainer>

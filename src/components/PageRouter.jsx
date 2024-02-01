@@ -9,9 +9,10 @@ import Profile from "../pages/Profile";
 import Premium from "../pages/Premium";
 import Notifications from "../pages/Notifications"
 
-function PageRouter() {
+function PageRouter({currentPath}) {
+  
   return (
-    <div className="h-100" style={ { width: "600px" } }>
+    <div className="h-100" style={ { width: `${currentPath==="/messages"?"900px":"600px"}` } }>
       <Routes>
         <Route path="home" element={ <Home /> } />
         <Route path="explore" element={ <Explore /> } />

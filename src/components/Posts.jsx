@@ -15,7 +15,7 @@ function Posts() {
     const BadgedIcon = withBadgeIcon(Avatar)
     return (
         
-        <CenterItemContainer >
+        <CenterItemContainer className="itemContainer__item" >
             <Card className="bg-black text-white">
                 {/** Reposts, retweet indicators */ }
                 <Row>

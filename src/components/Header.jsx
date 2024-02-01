@@ -58,7 +58,11 @@ function Header() {
     ];
 
     return (
-        <header className="d-flex bg-black flex-grow-1 justify-content-end" style={ { flexBasis: "200px", minWidth: "80px", userSelect: "none" } }>
+        <header
+            className="d-flex bg-black flex-grow-1 justify-content-end "
+            style={ { flexBasis: "200px", minWidth: "80px", userSelect: "none", flexShrink: "8" } }
+            
+        >
             {/* Create the Navigation bar */ }
             <Navbar className="flex-column ms-3 p-2 align-items-start justify-content-end flex-shrink-1" style={ { flexBasis: "300px", minWidth: "100px" } }>
                 {/* Create the twitter logo */ }

@@ -73,5 +73,5 @@
     transition: all 250ms ease;
 }
 .itemContainer__item:hover{
-    background-color: #6c757d39;
+    background-color: #6c757d39 !important;
 }

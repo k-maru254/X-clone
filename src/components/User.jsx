@@ -2,7 +2,7 @@ import React from 'react';
 import { RiVerifiedBadgeFill } from "react-icons/ri";
 import twitterColors from './twitterColors';
 
-function User({size="normal", name, userName, verified=true, direction="horizontal", ...props}) {
+function User({size="normal", name, userName, verified=false, direction="horizontal", ...props}) {
   return (
     <div className={ `d-flex align-items-center flex-${ direction === "horizontal" ? "row" : "column" } ${props.className}` }>
       <div className="d-flex align-items-center">
