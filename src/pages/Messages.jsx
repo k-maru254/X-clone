@@ -1,23 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from "react-bootstrap";
-import CenterItemContainer from '../components/CenterItemContainer';
-import CenterItemsContainer from '../components/CenterItemsContainer';
+import ThreadContent from '../components/ThreadContent';
+import MessageThreads from '../components/MessageThreads';
 
 function Messages() {
   return (
     <Container fluid>
       <Row>
-        <Col xs="5" className="vh-100 border-start border-end border-1 border-secondary p-0">
-          <CenterItemsContainer border={false}  >
-            <CenterItemContainer header >
-              <Col>
-              <p className="fw-bold fs-4">Messages</p>
-              </Col>
-            </CenterItemContainer>
-          </CenterItemsContainer>
+        <Col xs="5" className="vh-100 overflow-auto border-start border-end border-1 border-secondary p-0">
+          <MessageThreads />
         </Col>
-        <Col className="vh-100 p-0">
-          Message threads
+        <Col className="vh-100 p-0 m-0 overflow-auto" style={{overFlowY: "auto"}}>
+          <ThreadContent />
         </Col>
       </Row>
     </Container>

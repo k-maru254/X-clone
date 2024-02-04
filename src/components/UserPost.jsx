@@ -58,14 +58,14 @@ function UserPost() {
             {/* Row containing the icons to add user data such as videos and images and the submit button */}
             <Row className="justify-content-between align-items-center">
               <Col className="d-flex my-2 ps-3">
-                
+              
                 {/* Icons to add other data to the input field */}
                 {
                   icons.map((icon, ind) => {
                     const iconComponent = createElement(icon, { size: "20", color: "#1DA1F2" })
-                    return (<>
-                      <ShowIcon icon={icon} hoverColor={"blue"} color={twitterColors.blue} size={20} className="p-1" />                      
-                    </>
+                    return (
+                      <ShowIcon key={ind} icon={icon} hoverColor={"blue"} color={twitterColors.blue} size={20} className="p-1" />
+                      
                     );
                   })
                 }

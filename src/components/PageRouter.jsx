@@ -12,7 +12,7 @@ import Notifications from "../pages/Notifications"
 function PageRouter({currentPath}) {
   
   return (
-    <div className="h-100" style={ { width: `${currentPath==="/messages"?"900px":"600px"}` } }>
+    <div className="h-100" style={ { maxWidth: `${currentPath==="/messages"?"990px":"600px"}` } }>
       <Routes>
         <Route path="home" element={ <Home /> } />
         <Route path="explore" element={ <Explore /> } />
