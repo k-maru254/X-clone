@@ -75,3 +75,7 @@
 .itemContainer__item:hover{
     background-color: #6c757d39 !important;
 }
+.text-cursor{
+    display: inline-;
+    border-right: red solid 2px;
+}

@@ -4,7 +4,7 @@ import { MdCalendarMonth } from "react-icons/md";
 import Avatar from './Avatar';
 import twitterColors from './twitterColors';
 
-function UserProfile() {
+function UserProfile({centered=true}) {
     const userAbout = `Cars, 
     maps
     Code`;
@@ -13,7 +13,7 @@ function UserProfile() {
     const followers = 564;
     const userImageSrc = "profile.jpg"
 
-    const centerAligned = "d-flex flex-column align-items-center"
+    const centerAligned = `d-flex flex-column align-items-${centered? "center": "start"}`
 
     return (
         <div className={ centerAligned }> 
@@ -30,7 +30,7 @@ function UserProfile() {
 
             {/* About user */ }
             <div>
-                <p className="m-0">{ userAbout }</p>
+                <p className="m-0 ps-2">{ userAbout }</p>
             </div>
 
             {/* Month and year the user joined */ }
@@ -43,7 +43,7 @@ function UserProfile() {
             
             {/* Followings and followers */ }
             <div className="d-flex">
-                <p className='m-0'>{ following } <span className="text-secondary">Following</span></p>
+                <p className='m-0 ps-2'>{ following } <span className="text-secondary">Following</span></p>
                { followers && <p className="m-0 ms-3">{" " + followers } <span className="text-secondary">Followers</span></p>}
             </div>
         </div>

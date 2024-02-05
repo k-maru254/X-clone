@@ -8,7 +8,7 @@ import UserPost from "../components/UserPost";
 import Settings from "../components/Settings";
 function Home() {
     const [activePane, setActivePane] = useState("forYou");
-    const activePaneStyle = "border-bottom border-5 border-twitter-blue "
+    const activePaneStyle = "border-bottom border-5 border-twitter-blue ";
     
     return (
         <CenterItemsContainer>

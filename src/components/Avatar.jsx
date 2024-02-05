@@ -8,6 +8,7 @@ function Avatar({ icon = CiUser, src, size = "30", bg="secondary", color = "blac
         <div
             className={`bg-${bg} rounded-circle d-flex justify-content-center align-items-center p-0 ${className}`}
             style={ { width: `${ size_int + 15 }px`, height: `${ (size_int) + 15 }px`, boxSizing: "content-box" } }
+            {...props}
         >
             { createElement(icon, { size, color }) }
         </div> :
@@ -15,7 +16,7 @@ function Avatar({ icon = CiUser, src, size = "30", bg="secondary", color = "blac
             src={ src }
             width={ size_int + 15 }
             height={ size_int + 15 }
-            title="avatar"
+            alt="avatar"
             style={ { objectFit: "cover" } }
             
             className={`rounded-circle ${className}`}
