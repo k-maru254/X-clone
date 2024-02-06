@@ -10,9 +10,34 @@ import { FaRegBookmark } from "react-icons/fa6";
 import { MdOutlineFileUpload } from "react-icons/md";
 import withBadgeIcon from "./withHoverIcon";
 import CenterItemContainer from "./CenterItemContainer";
+import PostsComment from "./PostsComment";
+import { useState } from "react";
+import { IoMdHeart } from "react-icons/io";
+import twitterColors from "./twitterColors";
 
 function Posts() {
-    const BadgedIcon = withBadgeIcon(Avatar)
+    const BadgedIcon = withBadgeIcon(Avatar);
+    const [showModal, setShowModal] = useState(false);
+    const [isRepostOrRetweet, setIsRepostOrRetweet] = useState(false);
+    const [repostRetweetCount, setRepostRetweetCount] = useState(0);
+    const [isLike, setIsLike] = useState(false);
+    const [likeCount, setLikeCount] = useState(0);
+    const [commentCount, setCommentCount] = useState(24);
+
+    const handleClickRepostOrRetweet = (e)=>{
+        setIsRepostOrRetweet(!isRepostOrRetweet);
+        if (repostRetweetCount >= 0) isRepostOrRetweet ? setRepostRetweetCount(repostRetweetCount - 1) : setRepostRetweetCount(repostRetweetCount + 1);
+    }
+
+    const handleClickLike = (e) => {
+        setIsLike(!isLike);
+        if (likeCount >= 0) isLike ? setLikeCount(likeCount - 1) : setLikeCount(likeCount + 1);
+    }
+    
+    const handleClickComment = (e) => {
+        setShowModal(!showModal);
+    }
+
     return (
         
         <CenterItemContainer className="itemContainer__item" >
@@ -56,13 +81,14 @@ function Posts() {
                 {/* Comment, retweet, like,  views, bookmarks, share*/ }
                 <Row>
                     <Col xs={ { offset: 1 } } className="mb-2" >
-                        <BadgedIcon icon={ FaRegComment } color="white" size={ 16 } hoverColor="blue" badgeValue="1" />
+                        <BadgedIcon icon={ FaRegComment } color="white" size={ 16 } hoverColor="blue" badgeValue={commentCount} onClick={ handleClickComment }  />
+                        <PostsComment showModal={ showModal } onSetShowModal={ setShowModal } />
                     </Col>
                     <Col>
-                    <BadgedIcon icon={ FaRetweet } color="white" size={ 16 } hoverColor="green" badgeValue="1" />
+                    <BadgedIcon icon={ FaRetweet } onClick={handleClickRepostOrRetweet} color={isRepostOrRetweet? twitterColors.green :"white"} size={ 16 } hoverColor="green" badgeValue= {repostRetweetCount} />
                     </Col>
                     <Col>
-                    <BadgedIcon icon={ IoMdHeartEmpty } color="white" size={ 16 } hoverColor="red" badgeValue="1" />
+                    <BadgedIcon icon={ isLike? IoMdHeart: IoMdHeartEmpty } onClick={handleClickLike} color={isLike? twitterColors.red : "white"} size={ 16 } hoverColor="red" badgeValue={likeCount} />
                     </Col>
                     <Col>
                         <BadgedIcon icon={ IoStatsChart } color="white" size={ 16 } hoverColor="blue" />

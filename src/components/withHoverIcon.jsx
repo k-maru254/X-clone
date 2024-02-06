@@ -28,9 +28,9 @@ const withHoverIcon = (IconComponent) => {
         }
 
         return (
-            <div className="d-flex justify-content-center icon-budge" style={{background: ""}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <div className="d-flex justify-content-center icon-budge" style={{background: ""}} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} {...props}>
                 <IconComponent { ...props } color={iconBadgeColor} bg={bg} />
-                { badgeValue != 0 && <Badge className="bg-transparent ps-0 icon-budge " style={{color: iconBadgeColor}}>{ badgeValue }</Badge>}
+                { <Badge className={ `bg-transparent ps-0 icon-budge` } style={ { color: iconBadgeColor, visibility:  `${ badgeValue === 0 ? "hidden" : "visible" }`  } }>{ badgeValue }</Badge>}
             </div>
         )
   }

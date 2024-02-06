@@ -81,14 +81,21 @@ const handleChangePost = (event) => {
                 <Form.Control
                   as="textarea"
                   placeholder="What is happening?!"
-                  value={ post } name="userPost"
+                  value={ post }
+                  name="userPost"
                   id="user-post-input"
                   className="text-wrap bg-black px-0 border border-0 mb-2 fs-5 ms-3"
                   style={ { height: "44px", resize: "none", overflowY: "hidden ", padding: "10px 5px" } }
                   onChange={ handleChangePost }
                   onMouseDown={ handlePostBlur } />
                 
-                <Form.Control ref={ imageFileRef } type="file" name="postImage" onChange={ handleChangeURL } className="invisible position-absolute" />
+                <Form.Control
+                  ref={ imageFileRef }
+                  type="file" name="postImage"
+                  onChange={ handleChangeURL }
+                  className="invisible position-absolute"
+                />
+                
                 { imageUrl &&
                   <div className="position-relative">
                   

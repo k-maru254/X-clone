@@ -4,7 +4,7 @@ import twitterColors from './twitterColors';
 
 function User({size="normal", name, userName, verified=false, direction="horizontal", ...props}) {
   return (
-    <div className={ `d-flex flex-${ direction === "horizontal align-items-center" ? "row" : "column" } ${props.className}` }>
+    <div className={ `d-flex flex-${ direction === "horizontal" ? "row align-items-center" : "column" } ${props.className}` }>
       <div className="d-flex align-items-center">
         {/* Name */ }
         <div className="fw-bold" style={size==="small" ? {fontSize: "14px"}: {}}>

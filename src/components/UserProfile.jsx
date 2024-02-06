@@ -17,6 +17,7 @@ function UserProfile({centered=true}) {
 
     return (
         <div className={ centerAligned }> 
+        {/* This component contains all the details of a single user */}
         
             {/* Show user Avatar */ }
             <div>
